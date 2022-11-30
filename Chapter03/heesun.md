@@ -292,6 +292,9 @@ Comments
 
 ## 🐱 References 
 [소프트웨어-공학리팩터링-3장](https://velog.io/@bluejoyq/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%ED%95%99%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81-3%EC%9E%A5)
+
+<br/>
+
 [오리고기 개발 블로그](https://origogi.github.io/refactoring/chapter-3/)
 
 
