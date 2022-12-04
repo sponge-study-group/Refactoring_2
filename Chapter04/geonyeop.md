@@ -52,7 +52,7 @@ TDD에서는 테스트를 작성하고, 이 테스트를 통과하게끔 코드�
 
 테스트 대상이 될 코드는 사용자가 생상 계획을 검토하고 수정하도록 해주는 간단한 애플리케이션의 일부다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f79d9bd-d5a0-4a05-9a7e-89f456c05728/Untitled.png)
+![image](https://user-images.githubusercontent.com/64470512/205473247-44d65456-a0f3-47e1-bea9-31b7ae0b39af.png)
 
 생산계획은 각 지역의 수요와 가격으로 구성되며, 지역에 위치한 생산자들은 제품들을 특정 수량만큼 생산할 수 있다.
 
