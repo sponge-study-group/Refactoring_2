@@ -392,6 +392,54 @@ class List {...}
 after 코드에서는 List 클래스와 Stack 클래스가 더 이상 상속 관계에 있지 않습니다. 대신, Stack 클래스는 List 클래스의 인스턴스를 내부적으로 사용합니다. 이것은 Stack 클래스가 List 클래스의 기능 중 필요한 것만 사용할 수 있도록 하는 것입니다. <br/><br/>
 이 변경 사항은 코드 구조를 더 간단하고 유연하게 만들어줍니다. 또한, Stack 클래스는 이제 List 클래스의 구현 세부 정보에 덜 의존하게 되므로 코드 수정이 더 쉬워질 수 있습니다.
 
+<br/>
+
+> 위 코드는 자바스크립트의 클래스를 사용하여 Stack 클래스와 List 클래스를 정의한 예시 코드입니다. Stack 클래스는 List 클래스의 인스턴스를 _storage 프로퍼티로 가지고 있으며, 이를 사용하여 스택 자료구조를 구현합니다. <br/><br/>
+List 클래스는 구현되지 않았기 때문에, 아래와 같이 구현될 수 있습니다.
+
+<br/>
+
+```javascript
+class List {
+  constructor() {
+    this._data = [];
+    this._length = 0;
+  }
+
+  add(item) {
+    this._data.push(item);
+    this._length++;
+  }
+
+  remove() {
+    if (this._length === 0) {
+      throw new Error("List is empty");
+    }
+    const item = this._data.pop();
+    this._length--;
+    return item;
+  }
+
+  get length() {
+    return this._length;
+  }
+}
+```
+
+* Stack 클래스는 다음과 같이 사용할 수 있습니다.
+
+```javascript
+const myStack = new Stack();
+myStack._storage.add(1);  // Stack에 1 추가
+myStack._storage.add(2);  // Stack에 2 추가
+myStack._storage.add(3);  // Stack에 3 추가
+console.log(myStack._storage.remove());  // Stack에서 3 삭제하고 반환
+console.log(myStack._storage.remove());  // Stack에서 2 삭제하고 반환
+console.log(myStack._storage.remove());  // Stack에서 1 삭제하고 반환
+```
+
+> Stack 클래스는 List 클래스의 인스턴스를 _storage 프로퍼티로 가지고 있습니다. 따라서 Stack 클래스의 인스턴스인 myStack 객체를 생성한 후, _storage 프로퍼티에 접근하여 List 클래스의 add() 메서드를 사용하여 데이터를 추가할 수 있습니다. 마찬가지로, List 클래스의 remove() 메서드를 사용하여 Stack에 추가된 데이터를 삭제하고 반환할 수 있습니다.
+
 
 <br/><br/>
 ### 🐈‍⬛ Reference 
