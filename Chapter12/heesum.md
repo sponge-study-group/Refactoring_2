@@ -324,6 +324,51 @@ class PriorityOrderDelegate {
 
 <br/>
 
+* before 예시코드
+
+```javascript
+// Define a warehouse object
+const warehouse = {
+  daysToShip: 5
+}
+
+// Create a regular order
+const regularOrder = new Order();
+regularOrder._warehouse = warehouse;
+
+console.log(regularOrder.daysToShip); // Output: 5
+
+// Create a priority order
+const priorityOrder = new PriorityOrder();
+priorityOrder._warehouse = warehouse;
+priorityOrder._priorityPlan = { daysToShip: 2 };
+
+console.log(priorityOrder.daysToShip); // Output: 2
+```
+
+* after 예시 코드
+
+```javascript
+// Define a warehouse object
+const warehouse = {
+  daysToShip: 5
+}
+
+// Create a regular order
+const regularOrder = new Order();
+regularOrder._warehouse = warehouse;
+
+console.log(regularOrder.daysToShip); // Output: 5
+
+// Create a priority order
+const priorityOrder = new PriorityOrder();
+priorityOrder._warehouse = warehouse;
+priorityOrder._priorityPlan = { daysToShip: 2 };
+
+console.log(priorityOrder.daysToShip); // Output: 2
+```
+
+
 ## 12.11 슈퍼클래스를 위임으로 바꾸기 (Replace Superclass with Delegate)
 
 ```javascript
